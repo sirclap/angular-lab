@@ -12,6 +12,6 @@ Para una correcta ejecución deberá:
 
    ng serve
 
-Para simplificar en único paso de ha creado, con npm-run-all, el siguiente comando:
+Para simplificar en único paso se ha creado, con npm-run-all, el siguiente comando:
 
 npm run serve
