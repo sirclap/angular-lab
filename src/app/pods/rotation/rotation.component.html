@@ -1,0 +1,15 @@
+<mat-card *ngIf="_src">
+  <h2>Image rotation test</h2>
+  <h3>Current rotation: {{ rotateStatus }} degrees</h3>
+  <p>Click for right rotation.</p>
+  <p>Shift + click for left rotation.</p>
+  <div class="content">
+    <img
+      [src]="basePath + _src"
+      width="200"
+      [appRotate]="0"
+      [step]="15"
+      (onRotate)="rotate($event)"
+    />
+  </div>
+</mat-card>

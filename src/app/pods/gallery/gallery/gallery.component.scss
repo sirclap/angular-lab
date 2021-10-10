@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+
+  &-selected {
+    overflow: hidden;
+    max-height: 300px;
+  }
+
+  &-toolbar {
+    flex-basis: 75px;
+  }
+
+  &-carousel {
+    flex-basis: 120px;
+  }
+}
+
+.carousel-img {
+  object-fit: cover !important;
+}

@@ -1,0 +1,19 @@
+<div *ngIf="visible">
+  <div *ngIf="!sessionService.isAuthenticated()">
+    <a mat-button routerLink="/">HOME</a>
+    <a mat-button routerLink="/login">LOGIN</a>
+    <a mat-button routerLink="/about">ABOUT</a>
+  </div>
+  <div *ngIf="sessionService.isAuthenticated()">
+    <a mat-button routerLink="/dashboard">DASHBOARD</a>
+    <a mat-button routerLink="/gallery">GALLERY</a>
+    <a mat-button routerLink="/crud">CRUD</a>
+    <button mat-button [matMenuTriggerFor]="menu">
+      {{ sessionService.getCurrentUser()?.firstname }}
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/profile">PROFILE</button>
+      <button mat-menu-item (click)="logout()">LOGOUT</button>
+    </mat-menu>
+  </div>
+</div>

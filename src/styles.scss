@@ -1,0 +1,25 @@
+@import "variables";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.center-container {
+  width: 700px;
+  margin: 2rem auto;
+
+  @media (max-width: map-get($breakpoints, md)) {
+    width: auto;
+    margin: 2rem;
+  }
+}
+
+img.responsive {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$rWT4eqIaYgUDXIBfqPO1j.1aOonwjhvJbcmmDJevol8AGHQbkgZRi",
+      "firstname": "José",
+      "id": 1
+    },
+    {
+      "email": "master8@lemoncode.net",
+      "password": "$2a$10$fSUGu6O3gpR47G8fz6j0S.mkfrHHB/j8SWn3dIkJ5ryHasSMKblVS",
+      "firstname": "Marcos",
+      "id": 2
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "src": "1.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 2,
+      "src": "2.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 3,
+      "src": "3.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 4,
+      "src": "4.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 5,
+      "src": "5.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 6,
+      "src": "6.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 7,
+      "src": "7.jpg",
+      "title": "Un título"
+    },
+    {
+      "id": 8,
+      "src": "8.jpg",
+      "title": "Un título"
+    }
+  ]
+}

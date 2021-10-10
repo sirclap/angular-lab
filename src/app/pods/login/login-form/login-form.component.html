@@ -1,0 +1,36 @@
+<form [formGroup]="loginForm" class="form-container">
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-subtitle>Enter email and password</mat-card-subtitle>
+    <mat-card-content class="form">
+      <div class="form-field">
+        <input name="email" [formControl]="emailControl" />
+        <div *ngIf="emailControl.invalid" class="error">
+          <div *ngIf="emailControl.errors.required">
+            El usuario es obligatorio
+          </div>
+        </div>
+      </div>
+      <div class="form-field">
+        <input
+          name="password"
+          type="password"
+          [formControl]="passwordControl"
+        />
+        <div *ngIf="passwordControl.invalid" class="error">
+          <div *ngIf="passwordControl.errors.required">
+            La contraseña es obligatoria
+          </div>
+        </div>
+      </div>
+      <div class="error" *ngIf="formError">
+        {{ formError }}
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="loginForm.invalid" (click)="login()" mat-button>
+        ENTER
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

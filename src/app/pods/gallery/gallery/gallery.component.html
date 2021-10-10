@@ -1,0 +1,27 @@
+<mat-card class="gallery" *ngIf="_images?.length > 0">
+  <div class="gallery-selected">
+    <app-image-viewer [src]="basePath + selected.src"></app-image-viewer>
+  </div>
+
+  <div class="gallery-toolbar">
+    <app-pagination-toolbar
+      (onSelect)="select($event)"
+      [count]="_images?.length"
+    ></app-pagination-toolbar>
+  </div>
+
+  <div class="gallery-carousel">
+    <carousel [height]="125">
+      <div
+        *ngFor="let image of _images; let currentIndex = index"
+        class="carousel-cell"
+      >
+        <img
+          [src]="basePath + image.src"
+          (click)="select(currentIndex)"
+          class="carousel-img"
+        />
+      </div>
+    </carousel>
+  </div>
+</mat-card>

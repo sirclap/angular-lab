@@ -1,0 +1,28 @@
+<mat-nav-list *ngIf="!sessionService.isAuthenticated()">
+  <mat-list-item>
+    <a routerLink="" routerLinkActive="router-link-active">Home</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a routerLink="/login" routerLinkActive="router-link-active">Login</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a routerLink="/about" routerLinkActive="router-link-active">About</a>
+  </mat-list-item>
+</mat-nav-list>
+
+<mat-nav-list *ngIf="sessionService.isAuthenticated()">
+  <h2 matSubheader>Angular practice</h2>
+  <mat-list-item>
+    <a matLine routerLink="/dashboard">Dashboard</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a matLine routerLink="/gallery">Gallery</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a matLine routerLink="/crud">CRUD</a>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <h2 matSubheader>{{ sessionService.getCurrentUser()?.firstname }}</h2>
+  <mat-list-item><a matLine routerLink="/profile">Profile</a></mat-list-item>
+  <mat-list-item><a matLine (click)="logout()">Logout</a></mat-list-item>
+</mat-nav-list>

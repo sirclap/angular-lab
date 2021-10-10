@@ -1,0 +1,24 @@
+.form-container {
+  width: 400px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &-field {
+    padding: 1rem;
+  }
+
+  .error {
+    padding-top: 0.5rem;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+}

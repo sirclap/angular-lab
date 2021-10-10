@@ -1,0 +1,27 @@
+@import "variables";
+
+.container {
+  margin: 2rem;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .item {
+    position: relative;
+    flex-basis: 300px;
+  }
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    .item {
+      flex-basis: 100%;
+    }
+  }
+}

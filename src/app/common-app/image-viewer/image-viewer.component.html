@@ -1,0 +1,15 @@
+<div class="container">
+  <img [src]="_src" [ngStyle]="{ transform: 'scale(' + scale + ')' }" />
+  <div class="toolbar">
+    <div>
+      <button mat-mini-fab (click)="zoomIn()">
+        <mat-icon>zoom_in</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-mini-fab (click)="zoomOut()">
+        <mat-icon>zoom_out</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

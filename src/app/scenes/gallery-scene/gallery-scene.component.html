@@ -1,0 +1,4 @@
+<div class="scene-layout">
+  <app-gallery [images]="images" (onSelect)="select($event)"></app-gallery>
+  <app-rotation [src]="selected?.src"></app-rotation>
+</div>

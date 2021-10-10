@@ -1,0 +1,29 @@
+@import "variables";
+
+.scene-layout {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  app-gallery {
+    width: 40%;
+  }
+
+  app-rotation {
+    margin-left: 2rem;
+    width: 40%;
+  }
+
+  @media (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+
+    app-gallery {
+      width: 100%;
+    }
+
+    app-rotation {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
+}
